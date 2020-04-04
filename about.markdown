@@ -4,15 +4,30 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+1. Blog 주인장
+   - 이름 : 최가은
+   - 생년월일 : 2000. 11. 06
+   - 사는곳 : 경기도 시흥시
+   - 학력사항 
+        * 한국디지털미디어고등학교 해빙방어과 졸업
+        * 인천대학교 정보통신공학과 재학
+<br/><br/> 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+2. 주인장의 관심사 / 취미
+    - 여행
+        * 목표 : 종강 후 모은 돈으로 해외여행 가기(~~2월에 싱가포르 가려했으나 코로나 터져서 못감~~)
+        * 국내 여행지 : 제주도, 부산, 거제도, 통영, 강릉, 태백, 속초, 군산, 파주 등등
+        * 국외 여행지 : 일본(오사카, 후쿠오카, 삿포로), 중국(상해,~~애기때 가서 기억도 안남~~) 
+    - 프로그래밍
+        * 계기 : 고등학교를 IT특성화고에 가다보니 자연스레 코딩을 접하게 되었음. 3년동안 수행평가와 동아리 활동으로 다양한 분야를 경험하게 되었고, 수능 공부를 하던 와중에 차라리 코딩을 하고싶다는 생각이 들어 진로를 IT분야로 잡아볼까 하여 인천대학교 정보통신공학과에 입학하여 더 공부중.
+        * 장래희망 : 아직 잘 모르겠음. ^^*
+        * 배우고 싶은 분야 : 아두이노, 정보보안(웹해킹, 리버싱 등), ios 개발(Swift), 안드로이드(Kotlin) 등
+    - 독서
+        * 아무생각없이 집중할 수 있어서 좋음
+        * 요즘 히가시노 게이고의 소설책에 빠짐(용의자 x의 헌신!)
+        * 아니면 힐링에세이 자주읽음
+<br/><br/>  
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+3. 성격 키워드 작성  
+    `꼼꼼하다`,`고집이 세다`,`욕심이 많다`,`활발하다`,`자존심이 세다`,`신경질적이다`,`예민하다`,`놀기 좋아한다` ...
 
-
-[jekyll-organization]: https://github.com/jekyll
