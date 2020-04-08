@@ -1,13 +1,11 @@
 ---
 layout : single
-title : Java 버전에 따른 차이점, 바뀐 내용
-date : 2020-03-29 17:30 +0900    
-author : Gaeun
+title :  Java 버전에 따른 차이점, 바뀐 내용
+date :   2020-03-29 17:30 +0900
+categories: java 
 ---
 
 ## 자바 버전에 따른 차이점, 바뀐 내용   
----
-<br/>
 #### **Java SE 5**
 * 2004.09 발표
 * 기능적으로 많은 변화가 생김 

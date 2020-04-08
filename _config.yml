@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en"
 title                    : "My-awesome-site"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
@@ -95,13 +95,13 @@ analytics:
 author:
   name             : "최가은"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Just Programmer"
+  bio              : "배우고 있는, 곧 프로그래머 :-D"
   location         : "Siheung, South Korea"
-  email            : # "gaeun1884@naver.com"
+  email            : "gaeun1884@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      url: mailto:gaeun1884@naver.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -113,10 +113,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/gaeunchoi"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/gaa._.nni/"
 
 # Site Footer
 footer:
