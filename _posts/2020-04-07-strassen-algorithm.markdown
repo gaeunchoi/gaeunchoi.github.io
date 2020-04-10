@@ -1,9 +1,13 @@
 ---
 layout : single
-title :  Strassen Algorithm 알아보기
+title :  "[3주차 과제] Strassen Algorithm 알아보기"
 date :   2020-04-07 16:28 +0900
-categories: algorithm strassen
+categories: algorithm assignment
 ---
+
+
+Markdown에서의 수식작성은 [위키백과:Tex 문법](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95#%EC%9C%84,_%EC%95%84%EB%9E%98,_%EC%A0%84%EC%B9%98,%ED%9B%84%EC%B9%98_%EC%B2%A8%EC%9E%90) 참고했습니다!
+
 
 ## Strassen Algorithm (슈트라센 알고리즘)
 
@@ -71,7 +75,7 @@ $$C_{2,2} = M_1 - M_2 + M_3 + M_6$$
 
 슈트라센 알고리즘은 속도에 비해 수치 안정성이 떨어지는 것으로 알려져 있다. 두 행렬 $A$와 $B$를 곱한 결과를 $C$라 할 때, 실제 오차인 $\lVert C - AB \rVert$는 $27n^2u\lVert A \rVert \lVert B \rVert + O(u^2)$ 보다 작음이 알려져 있다. 이는 일반적인 행렬 곱셈보다 더 큰 오차이다. 
 
-아래 코드는 [Google]에 `Strassen Algorithm java`를 검색하면 나오는 소스코드이다.
+아래 코드는 Google에 `Strassen Algorithm java`를 검색하면 나오는 소스코드이다.
 ```java
 import java.util.Scanner;
  
@@ -215,7 +219,6 @@ public class Strassen
  
     }
 }
-Strassen Multiplication Algorithm Test
 ```
 
 ```
@@ -240,5 +243,3 @@ Product of matrices A and  B :
 19 5 19 18
 13 23 11 30
 ```
-
-[Google] : https://google.co.kr
