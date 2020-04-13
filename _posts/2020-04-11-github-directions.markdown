@@ -6,6 +6,7 @@ categories: github
 ---
 
 ## 깃허브 총 정리  
+
 1. Git의 기본 
    1. Git이란 무엇인가 ?  
    Git이란 souce 관리를 위한 분산 버전 관리 시스템이다.  

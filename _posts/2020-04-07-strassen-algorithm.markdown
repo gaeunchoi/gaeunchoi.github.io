@@ -75,7 +75,7 @@ $$C_{2,2} = M_1 - M_2 + M_3 + M_6$$
 
 슈트라센 알고리즘은 속도에 비해 수치 안정성이 떨어지는 것으로 알려져 있다. 두 행렬 $A$와 $B$를 곱한 결과를 $C$라 할 때, 실제 오차인 $\lVert C - AB \rVert$는 $27n^2u\lVert A \rVert \lVert B \rVert + O(u^2)$ 보다 작음이 알려져 있다. 이는 일반적인 행렬 곱셈보다 더 큰 오차이다. 
 
-아래 코드는 Google에 `Strassen Algorithm java`를 검색하면 나오는 소스코드이다.
+아래 코드는 Google에 `Strassen Algorithm java`를 검색하면 나오는 소스코드이다. 혼자 짜보려다 실패해서 아래 코드를 따라쳐 이해하며 만들었다 ... 길어보이긴 하지만 생각보다 어렵진않다.
 ```java
 import java.util.Scanner;
  
