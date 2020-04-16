@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "air" # "default", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "밍먕묭"
+title                    : "여긴 어디 나는 누구 뿌앵"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : 뚱땅뚱땅 이것저것 적고있는 이상한 곳 # site tagline that appears below site title in masthead
 name                     : "최가은"
 description              : "컴퓨터 알고리즘"
 url                      : https://gaeunchoi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -94,8 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "최가은"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "배우고 있는, 곧 프로그래머 :-D"
+  avatar           : /assets/images/img.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "성장중인 코린이 -"
   location         : "Siheung, South Korea"
   email            : "gaeun1884@naver.com"
   links:
