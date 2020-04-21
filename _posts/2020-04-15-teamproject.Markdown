@@ -22,4 +22,4 @@ category : assignment
   
 3. 추가 수정사항 
    1. [수정] 수량을 -/+ 버튼만으로 조절하는게 아니라 입력할 수 있게 해볼까 ..
-   2. [수정] 처음 시작할때 -버튼 setEnabled false 설정해주기
+   2. [수정] ~~처음 시작할때 -버튼 setEnabled false 설정해주기~~
