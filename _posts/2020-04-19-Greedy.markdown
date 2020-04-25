@@ -18,7 +18,8 @@ categories: algorithm greedy
    - 집합 커버 문제 SetCover
    - 작업 스케줄링 JobScheduling
    - 허프만 압축 Huffman compression  
-  
+    
+    
 3. Programmers 코딩테스트 연습 탐욕법 문제 - 단속카메라 
     
    **문제 설명**  
