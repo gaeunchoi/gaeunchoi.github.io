@@ -2,7 +2,7 @@
 layout : single
 title :  "[OJS] 분할 정복 알고리즘 문제"
 date :   2020-04-09 23:00 +0900
-category : algorithm assignment
+category : algorithm
 ---
 
 ## OJS 4주차 문제풀이  
