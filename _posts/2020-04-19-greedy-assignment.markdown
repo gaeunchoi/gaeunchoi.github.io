@@ -2,7 +2,9 @@
 layout : single
 title :  "[5주차 과제] 탐욕(Greedy) 알고리즘"
 date :   2020-04-19 20:30 +0900
-categories: algorithm assignment
+categories: 
+    - algorithm 
+    - assignment
 ---
 
 ## 탐욕 알고리즘 Greedy Algorithm  

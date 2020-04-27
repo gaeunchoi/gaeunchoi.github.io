@@ -2,7 +2,9 @@
 layout : single
 title :  "[OJS] 탐욕 알고리즘 문제"
 date :   2020-04-18 21:00 +0900
-category : algorithm
+category : 
+    - OJS
+    - algorithm
 ---
 
 ## OJS 5주차 문제풀이  

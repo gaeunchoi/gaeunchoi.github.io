@@ -2,7 +2,9 @@
 layout : single
 title :  "[2주차 과제] Java 버전에 따른 차이점, 바뀐 내용"
 date :   2020-03-29 23:30 +0900
-categories: java assignment
+categories: 
+  - java 
+  - assignment
 ---
 
 ## 자바 버전에 따른 차이점, 바뀐 내용  

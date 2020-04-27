@@ -2,11 +2,13 @@
 layout : single
 title :  "[3주차 과제] Strassen Algorithm 알아보기"
 date :   2020-04-07 16:28 +0900
-categories: algorithm assignment
+categories: 
+    - algorithm 
+    - assignment
 ---
 
 
-Markdown에서의 수식작성은 [위키백과:Tex 문법](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95#%EC%9C%84,_%EC%95%84%EB%9E%98,_%EC%A0%84%EC%B9%98,%ED%9B%84%EC%B9%98_%EC%B2%A8%EC%9E%90) 참고했습니다!
+Markdown에서의 수식작성은 [위키백과:Tex 문법](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95#%EC%9C%84,_%EC%95%84%EB%9E%98,_%EC%A0%84%EC%B9%98,%ED%9B%84%EC%B9%98_%EC%B2%A8%EC%9E%90) 참고  
 
 
 ## Strassen Algorithm (슈트라센 알고리즘)

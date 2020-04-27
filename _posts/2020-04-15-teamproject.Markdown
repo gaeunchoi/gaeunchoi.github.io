@@ -2,7 +2,8 @@
 layout : single
 title :  "[4주차 과제] 자판기 팀프로젝트"
 date :   2020-04-14 20:00 +0900
-category : assignment
+category : 
+   - assignment
 ---
 
 ## Vending Machine 제작

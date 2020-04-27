@@ -2,7 +2,9 @@
 layout : single
 title :  "[2주차] Jekyll 설치 및 git repo 연동"
 date :   2020-03-29 23:00 +0900
-categories: jekyll git 
+categories: 
+    - jekyll 
+    - github
 ---
 
 ## 20200327 Jekyll 설치  

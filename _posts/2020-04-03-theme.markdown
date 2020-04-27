@@ -2,7 +2,7 @@
 layout : single
 title :  "[3주차] minimal-mistakes theme 적용"
 date :   2020-04-03 20:00 +0900
-category : jekyll  
+category : jekyll 
 ---
 
 ### Minimal mistakes theme 적용하기
