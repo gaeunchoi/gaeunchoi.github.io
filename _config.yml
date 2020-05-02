@@ -94,14 +94,14 @@ analytics:
 # Site Author
 author:
   name             : "최가은"
-  avatar           : /assets/images/img.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/images/img3.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "성장중인 코린이 - ! <br>머리속을 뚱땅뚱땅 굴리는 곳이지롱"
-  location         : "Siheung, South Korea"
+  location         : "Incheon National University"
   email            : "gaeun1884@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:gaeun1884@naver.com
+      # url: mailto:gaeun1884@naver.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://gaeunchoi.github.io"
