@@ -14,7 +14,7 @@ order: 4
 ## 🙌🏻 Contact
 Email | gaeun1884@inu.ac.kr  
 Github | [Github/gaeunchoi](https://github.com/gaeunchoi)    
-Blog | [가람쥐네 블로그](gaeunchoi.github.io)
+Blog | [가람쥐네 블로그](https://gaeunchoi.github.io)
   
 <br><br>
 ## 💁🏻‍♀️ About Me 
