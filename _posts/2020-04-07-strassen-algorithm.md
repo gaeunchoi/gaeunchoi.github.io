@@ -1,7 +1,7 @@
 ---
 title :  "[컴퓨터알고리즘 3주차 과제] Strassen Algorithm 알아보기"
 date :   2020-04-07 12:30 +0900
-categories: [Computer_algorithm, assignment]
+categories: [INU, Computer algorithm]
 tags: [algorithm, java]
 math: true
 ---

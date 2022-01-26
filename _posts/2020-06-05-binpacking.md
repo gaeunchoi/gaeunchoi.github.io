@@ -1,7 +1,7 @@
 ---
 title :  "[컴퓨터알고리즘 12주차 OJS] 통 채우기(Bin Packing)"
 date :   2020-06-05 00:15 +0900
-categories: [Computer_algorithm, OJS]
+categories: [INU, Computer algorithm]
 tags: [algorithm, java]
 math: true
 ---

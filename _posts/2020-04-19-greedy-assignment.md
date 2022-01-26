@@ -1,7 +1,7 @@
 ---
 title :  "[컴퓨터알고리즘 5주차 OJS] 탐욕 알고리즘(Greedy) - Programmers 문제"
 date :   2020-04-19 01:30 +0900
-categories: [Computer_algorithm, OJS]
+categories: [INU, Computer algorithm]
 tags: [algorithm, java]
 ---
 

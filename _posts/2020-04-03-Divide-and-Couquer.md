@@ -1,7 +1,7 @@
 ---
-title :  "[컴퓨터알고리즘 4주차] 분할 정복 알고리즘"
+title :  "[Algorithm] 분할 정복 알고리즘"
 date :   2020-04-03 23:00 +0900
-categories: [Computer_algorithm, study]
+categories: [Study, Algorithm]
 tags: [algorithm]
 ---
 

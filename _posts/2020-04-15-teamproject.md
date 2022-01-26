@@ -1,7 +1,7 @@
 ---
 title :  "[컴퓨터알고리즘 4주차 과제] Swing을 이용한 자판기 팀프로젝트"
 date :   2020-04-15 18:30 +0900
-categories: [Computer_algorithm, assignment]
+categories: [INU, Computer algorithm]
 tags: [algorithm, java]
 ---
 

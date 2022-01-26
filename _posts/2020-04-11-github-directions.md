@@ -1,7 +1,7 @@
 ---
-title :  "[컴퓨터알고리즘 공부] Github 명령어"
+title :  "[Git] Github 명령어"
 date :   2020-04-15 14:30 +0900
-categories: [Computer_algorithm, study]
+categories: [Study, Git]
 tags: [git]
 ---
 
