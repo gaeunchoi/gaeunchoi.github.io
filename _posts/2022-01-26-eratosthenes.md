@@ -17,6 +17,7 @@ tags: [python, algorithm, prime number]
 ## 소수 판별 알고리즘을 단순하게 생각해보면 
 ---
 아래 코드는 1부터 100 사이의 소수를 판별하는 파이썬 코드이다.  
+
 ```python
 n = 100
 
@@ -43,7 +44,7 @@ for i in range(n+1):
 그래서 주어진 범위 내에서 소수를 구할 때 사용하는 것이 에라토스테네스의 체이다.  
   
 이 방법은 주어진 범위에서 합성수를 지우는 방식으로 소수를 조금 더 빠르게 찾는 방법이다.  
-![에라토스테네스의 체](/assets/img/algorithm/Sieve_of_Eratosthenes_animation.gif)  
+![에라토스테네스의체](/assets/img/algorithm/Sieve_of_Eratosthenes_animation.gif)  
   
 위 알고리즘은 다음 과정을 통해 진행된다.  
 1. 2부터 소수를 구하고자 하는 구간의 모든 수를 나열한다. 위 그림에서 회색 사각형으로 두른 수들이 여기에 해당한다.
