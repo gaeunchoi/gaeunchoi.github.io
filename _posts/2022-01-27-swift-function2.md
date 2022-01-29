@@ -2,10 +2,11 @@
 title :  "[Swift] 함수 고급"
 date :   2022-01-27 15:12 +0900
 categories: [Programming, Swift]
-tags: [swift, Xcode]
+tags: [swift, Xcode, Programming]
 ---
 
-> 본 게시물은 '스위프트 프로그래밍(3판)'을 정리하며 작성하는 게시글입니다.
+> 본 게시물은 '스위프트 프로그래밍(3판)'의 7장 함수를 정리하며 작성하는 게시글입니다.  
+> 아래 작성된 코드는 [yagom님 swift 기본 문법](https://github.com/yagom/swift_basic.git)의 코드를 참고했습니다.
 
 ## 매개변수와 전달인자
 ---

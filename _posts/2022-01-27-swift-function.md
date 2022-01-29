@@ -2,11 +2,11 @@
 title :  "[Swift] 함수 기본"
 date :   2022-01-27 13:48 +0900
 categories: [Programming, Swift]
-tags: [swift, Xcode]
+tags: [swift, Xcode, Programming]
 ---
 
-> 본 게시물은 '스위프트 프로그래밍(3판)'을 정리하며 작성하는 게시글입니다.
-
+> 본 게시물은 '스위프트 프로그래밍(3판)'의 7장 함수를 정리하며 작성하는 게시글입니다.  글입니다.  
+> 아래 작성된 코드는 [yagom님 swift 기본 문법](https://github.com/yagom/swift_basic.git)의 코드를 참고했습니다.
 
 ## 함수와 메서드 
 ---
@@ -47,7 +47,7 @@ tags: [swift, Xcode]
    ```
 
    기본적으로 함수의 이름과 매개변수(Parameter, 파라미터), 반환 타입(Return Type) 등을 사용하여 정의한다.   
-   
+
    함수를 정의하는 키워드는 `func`이고, 반환타입을 명시하기 전에 `->`를 사용하여 어떤 타입이 반환될 것인지 명시해준다.  
 
    introduce 함수와 같이 함수 내부의 코드가 단 한줄의 표현이고, 그 표현의 결괏값의 타입이 함수의 반환 타입과 일치한다면 `return` 키워드를 생략해도 그 표현의 결괏값이 함수의 반환값이 될 수 있다.  

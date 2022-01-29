@@ -2,11 +2,11 @@
 title :  "[Swift] 데이터 타입 고급"
 date :   2022-01-12 21:34 +0900
 categories: [Programming, Swift]
-tags: [swift, Xcode]
+tags: [swift, Xcode, Programming]
 ---
 
-> 본 게시물은 '스위프트 프로그래밍(3판)'을 정리하며 작성하는 게시글입니다.  
-> 아래 작성된 코드는 [yagom님 swift 기본 문법](https://github.com/yagom/swift_basic.git)의 코드를 사용했습니다.
+> 본 게시물은 '스위프트 프로그래밍(3판)'의 4장 데이터 타입 고급을 정리하며 작성하는 게시글입니다.  
+> 아래 작성된 코드는 [yagom님 swift 기본 문법](https://github.com/yagom/swift_basic.git)의 코드를 참고했습니다.
 
 ## 타입 별칭
 스위프트에서 기본으로 제공하는 데이터 타입이든, 사용자가 임의로 만든 데이터 타입이든 이미 존재하는 데이터 타입의 임의로 다른 이름(별칭)을 부여할 수 있다. 그런 다음 기본 타입 이름과 이후에 추가한 별칭을 모두 사용할 수 있다. >> C언어 구조체에서의 typedef를 생각하면 될 것 같다.
