@@ -2,7 +2,7 @@
 title :  "[Swift] 옵셔널 추출"
 date :   2022-01-28 18:51 +0900
 categories: [Programming, Swift]
-tags: [swift, Xcode, Programming]
+tags: [swift, Xcode, Programming, iOS]
 ---
 
 > 본 게시물은 '스위프트 프로그래밍(3판)'의 8장 옵셔널을 정리하며 작성하는 게시글입니다.  
