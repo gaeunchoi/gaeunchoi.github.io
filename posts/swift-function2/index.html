@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en" mode="light" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="day-prompt" content="days ago"><meta name="hour-prompt" content="hours ago"><meta name="minute-prompt" content="minutes ago"><meta name="justnow-prompt" content="just now"><meta name="generator" content="Jekyll v4.3.2" /><meta property="og:title" content="[Swift] 함수 고급" /><meta property="og:locale" content="en" /><meta name="description" content="본 게시물은 ‘스위프트 프로그래밍(3판)’의 7장 함수를 정리하며 작성하는 게시글입니다. 아래 작성된 코드는 yagom님 swift 기본 문법의 코드를 참고했습니다." /><meta property="og:description" content="본 게시물은 ‘스위프트 프로그래밍(3판)’의 7장 함수를 정리하며 작성하는 게시글입니다. 아래 작성된 코드는 yagom님 swift 기본 문법의 코드를 참고했습니다." /><link rel="canonical" href="https://gaeunchoi.github.io/posts/swift-function2/" /><meta property="og:url" content="https://gaeunchoi.github.io/posts/swift-function2/" /><meta property="og:site_name" content="가람쥐’s Blog" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2022-01-27T15:12:00+09:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="[Swift] 함수 고급" /><meta name="twitter:site" content="@twitter_username" /><meta name="google-site-verification" content="5STMdqWF8g5vaYVcWScenBS8IexNd_wElspLaBgoKeg" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-01-29T21:17:25+09:00","datePublished":"2022-01-27T15:12:00+09:00","description":"본 게시물은 ‘스위프트 프로그래밍(3판)’의 7장 함수를 정리하며 작성하는 게시글입니다. 아래 작성된 코드는 yagom님 swift 기본 문법의 코드를 참고했습니다.","headline":"[Swift] 함수 고급","mainEntityOfPage":{"@type":"WebPage","@id":"https://gaeunchoi.github.io/posts/swift-function2/"},"url":"https://gaeunchoi.github.io/posts/swift-function2/"}</script><title>[Swift] 함수 고급 | 가람쥐's Blog</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="가람쥐's Blog"><meta name="application-name" content="가람쥐's Blog"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'], inlineMath: [['$','$']] } }); </script> <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end" lang="en"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> <img src="/assets/img/avatar/gaanii.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/">가람쥐's Blog</a></div><div class="site-subtitle font-italic">Just Do It</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <a href="https://github.com/gaeunchoi" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href="https://www.facebook.com/gaeun1884" aria-label="facebook" target="_blank" rel="noopener"> <i class="fab fa-facebook"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['gaeun1884','inu.ac.kr'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="" aria-label="" target="_blank" rel="noopener"> <i class=""></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Home </a> </span> <span>[Swift] 함수 고급</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="core-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>[Swift] 함수 고급</h1><div class="post-meta text-muted"><div> By <em> <a href="https://github.com/gaeunchoi">gaanii</a> </em></div><div class="d-flex"><div> <span> Posted <em class="timeago" date="2022-01-27 15:12:00 +0900" data-toggle="tooltip" data-placement="bottom" title="Thu, Jan 27, 2022, 3:12 PM +0900" >Jan 27, 2022</em> </span> <span> Updated <em class="timeago" date="2022-01-29 21:17:25 +0900 " data-toggle="tooltip" data-placement="bottom" title="Sat, Jan 29, 2022, 9:17 PM +0900" >Jan 29, 2022</em> </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1823 words"> <em>10 min</em> read</span></div></div></div><div class="post-content"><blockquote><p>본 게시물은 ‘스위프트 프로그래밍(3판)’의 7장 함수를 정리하며 작성하는 게시글입니다.<br /> 아래 작성된 코드는 <a href="https://github.com/yagom/swift_basic.git">yagom님 swift 기본 문법</a>의 코드를 참고했습니다.</p></blockquote><h2 id="매개변수와-전달인자">매개변수와 전달인자<a href="#매개변수와-전달인자" class="anchor"><i class="fas fa-hashtag"></i></a></h2></h2><hr /><p>매개변수는 함수를 정의할 때 외부로부터 받아들이는 전달 값의 이름을 의미한다.<br /> 전달인자(Argument), 혹은 인자는 함수를 실제로 호출할 때 전달하는 값을 의미한다.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>   <span class="kd">func</span> <span class="nf">hello</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+       <span class="k">return</span> <span class="s">"Hello </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">!"</span>
+   <span class="p">}</span>
+
+   <span class="k">let</span> <span class="nv">helloJenny</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="nf">hello</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">Jenny</span><span class="p">)</span>
+   <span class="nf">print</span><span class="p">(</span><span class="n">helloJenny</span><span class="p">)</span>        <span class="c1">// Hello Jenny!</span>
+</pre></table></code></div></div><p>위 코드에서 hello(name:)함수에서 매개변수는 name이고, 실제 사용 시 전달받는 값인 “Jenny”가 전달인자에 해당한다.</p><h2 id="매개변수-이름과-전달인자-레이블">매개변수 이름과 전달인자 레이블<a href="#매개변수-이름과-전달인자-레이블" class="anchor"><i class="fas fa-hashtag"></i></a></h2></h2><hr /><p>아래 코드를 살펴보자.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="kd">func</span> <span class="nf">sayHello</span><span class="p">(</span><span class="nv">myName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">yourName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s">"Hello </span><span class="se">\(</span><span class="n">yourName</span><span class="se">)</span><span class="s">! I'm </span><span class="se">\(</span><span class="n">myName</span><span class="se">)</span><span class="s">"</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">sayHello</span><span class="p">(</span><span class="nv">myName</span><span class="p">:</span> <span class="s">"gaanii"</span><span class="p">,</span> <span class="nv">yourName</span><span class="p">:</span> <span class="s">"Hwan"</span><span class="p">))</span>     <span class="c1">// Hello Hwan! I'm gaanii</span>
+</pre></table></code></div></div><p>위 코드에서 함수를 호출할 때 myName과 yourName이라는 <strong>매개변수 이름</strong>을 사용했다.<br /> 여기서 매개변수 이름과 더불어 <strong>전달인자 레이블</strong>을 지정해줄 수 있다.</p><p>전달인자 레이블은 함수 외부에서 매개변수의 역할을 좀 더 명확히 할 수 있다. 이를 사용하려면 함수 정의에서 매개변수 이름 앞에 한칸을 띄운 후 전달인자 레이블을 지정한다.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre><td class="rouge-code"><pre><span class="kd">func</span> <span class="nf">함수이름</span><span class="p">(</span><span class="n">전달인자1</span> <span class="n">레이블</span> <span class="n">매개변수1</span> <span class="nv">이름</span><span class="p">:</span> <span class="n">매개변수1</span> <span class="n">타입</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">반환타입</span> <span class="p">{</span>
+    <span class="cm">/* 실행구문 */</span>
+    <span class="k">return</span> <span class="n">반환</span> <span class="n">값</span>
+<span class="p">}</span>
+
+<span class="c1">// from과 to라는 전달인자 레이블을 사용하며</span>
+<span class="c1">// myName과 name이라는 매개변수 이름이 있는 sayHello 함수 </span>
+<span class="kd">func</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">from</span> <span class="nv">myName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">to</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s">"Hello </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">! I'm </span><span class="se">\(</span><span class="n">myName</span><span class="se">)</span><span class="s">"</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">sayHello</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"gaanii"</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="s">"Hwan"</span><span class="p">))</span>     <span class="c1">// Hello Hwan! I'm gaanii</span>
+</pre></table></code></div></div><p>함수 내부에서 전달인자 레이블을 사용할 수 없으며 함수를 호출할 때는 매개변수 이름을 사용할 수 없다.</p><p>전달인자 레이블을 사용하고 싶지 않다면 와일드카드 식별자인 <code class="language-plaintext highlighter-rouge">_</code>를 사용하면 된다. 아래 코드에서 확인할 수 있다.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre><td class="rouge-code"><pre><span class="kd">func</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">times</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..</span> <span class="o">&lt;</span> <span class="n">times</span> <span class="p">{</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s">"Hello </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">!"</span> <span class="o">+</span> <span class="s">" "</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">sayHello</span><span class="p">(</span><span class="s">"gaanii"</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>    <span class="c1">// Hello gaanii! Hello gaanii!</span>
+</pre></table></code></div></div><h2 id="매개변수-기본값">매개변수 기본값<a href="#매개변수-기본값" class="anchor"><i class="fas fa-hashtag"></i></a></h2></h2><hr /><p>매개변수마다 기본값을 지정할 수 있다. 즉 매개변수가 전달되지 않으면 기본값을 사용한다는 것이다.</p><p>매개변수 기본값이 있는 함수는 함수를 중복 정의한 것처럼 사용할 수 있다.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><td class="rouge-code"><pre><span class="kd">func</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">times</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..</span> <span class="o">&lt;</span> <span class="n">times</span> <span class="p">{</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s">"Hello </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">!"</span> <span class="o">+</span> <span class="s">" "</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">sayHello</span><span class="p">(</span><span class="s">"Hwan"</span><span class="p">))</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">sayHello</span><span class="p">(</span><span class="s">"gaanii"</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>    <span class="c1">// Hello gaanii! Hello gaanii!</span>
+</pre></table></code></div></div><p>sayHello(: times:) 함수의 times 매개변수에 기본값을 3으로 주면 times 매개변수를 넘겨주지 않아도 times 값을 3으로 설정해 함수가 동작한다.</p><p>times 매개변수의 전달 값을 2로 설정하여 넘겨주면 전달 값을 반영하여 두 번 출력한다.</p><h2 id="가변-매개변수">가변 매개변수<a href="#가변-매개변수" class="anchor"><i class="fas fa-hashtag"></i></a></h2></h2><hr /><p>매개변수로 몇개의 값이 들어올지 모를 때, 가변 매개변수를 사용할 수 있다.</p><p>가변 매개변수는 0개 이상(0개 포함)의 값을 받아올 수 있으며, 가변 매개변수로 들어온 값은 배열처럼 사용 가능하다.</p><p>함수마다 가변 매개변수는 하나만 가질 수 있다.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre><td class="rouge-code"><pre><span class="kd">func</span> <span class="nf">sayHelloToFriends</span><span class="p">(</span><span class="nv">me</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">friends</span> <span class="nv">names</span><span class="p">:</span> <span class="kt">String</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+
+    <span class="k">for</span> <span class="n">friend</span> <span class="k">in</span> <span class="n">names</span> <span class="p">{</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s">"Hello </span><span class="se">\(</span><span class="n">friends</span><span class="se">)</span><span class="s">"</span> <span class="o">+</span> <span class="s">" "</span> 
+    <span class="p">}</span>
+
+    <span class="n">result</span> <span class="o">+=</span> <span class="s">"I'm "</span> <span class="o">+</span> <span class="n">me</span> <span class="o">+</span> <span class="s">"!"</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">sayHelloToFriends</span><span class="p">(</span><span class="nv">me</span><span class="p">:</span> <span class="s">"gaanii"</span><span class="p">,</span> <span class="nv">friends</span><span class="p">:</span><span class="s">"Hwan"</span><span class="p">,</span> <span class="s">"Stone"</span><span class="p">,</span> <span class="s">"Hwi"</span><span class="p">,</span> <span class="s">"Ko"</span><span class="p">))</span>
+<span class="c1">// Hello Hwan! Hello Stone! Hello Hwi! Hello Ko! I'm gaanii!</span>
+
+<span class="nf">prinnt</span><span class="p">(</span><span class="nf">sayHelloToFriends</span><span class="p">(</span><span class="nv">me</span><span class="p">:</span> <span class="s">"gaanii"</span><span class="p">))</span>
+<span class="c1">// I'm gaanii!</span>
+</pre></table></code></div></div><p>함수의 전달인자로 값을 전달할 때는 보통 값을 복사해서 전달한다.</p><p>값이 아닌 참조를 전달하려면 입출력 매개변수를 사용한다.</p><p>입출력 매개변수의 전달 순서는 다음과 같다.</p><ol><li>함수를 호출할 때, 전달인자의 값을 복사한다.<li>해당 전달인자의 값을 변경하면 1에서 복사한 것을 함수 내부에서 변경한다.<li>함수를 반환하는 시점에 2에서 변경된 값을 원래의 매개변수에 할당한다.</ol><p>참조는 <code class="language-plaintext highlighter-rouge">inout</code> 매개변수로 전달될 변수 또는 상수 앞에 앰퍼샌드(&amp;)를 붙여 표현한다.</p><p>아래 코드에서 값 타입 매개변수와 참조 타입 매개변수의 사용을 비교하여 볼 수 있다.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre><td class="rouge-code"><pre><span class="k">var</span> <span class="nv">numbers</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="kd">func</span> <span class="nf">nonReferenceParameter</span><span class="p">(</span><span class="n">_</span> <span class="nv">arr</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">copiedArr</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span>
+    <span class="n">copiedArr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">referenceParameter</span><span class="p">(</span><span class="n">_</span> <span class="nv">arr</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="nf">nonReferenceParameter</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>       <span class="c1">// 2</span>
+
+<span class="nf">referenceParameter</span><span class="p">(</span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">)</span>    <span class="c1">// 참조를 표현하기 위해 &amp; 붙여줌 </span>
+<span class="nf">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>       <span class="c1">// 1</span>
+</pre></table></code></div></div><p>값 타입 데이터의 참조를 전달인자로 보내면 함수 내부에서 참조하여 원래 값을 변경한다(C 포인터와 유사)</p><p>입출력 매개변수는 매개변수 기본값을 가질 수 없으며, 가변 매개변수로 사용될 수 없다.</p><p>또한 상수는 변경될 수 없으므로 입출력 매개변수의 전달인자로 사용될 수 없다.</p><h2 id="데이터-타입으로서의-함수">데이터 타입으로서의 함수<a href="#데이터-타입으로서의-함수" class="anchor"><i class="fas fa-hashtag"></i></a></h2></h2><hr /><p>스위프트의 함수는 일급 객체이므로 하나의 데이터 타입으로 사용할 수 있다. 방법은 아래와 같다.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="p">(</span><span class="n">매개변수</span> <span class="n">타입의</span> <span class="n">나열</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">반환타입</span>
+</pre></table></code></div></div><h3 id="함수타입의-사용">함수타입의 사용<a href="#함수타입의-사용" class="anchor"><i class="fas fa-hashtag"></i></a></h3></h3><p>예시를 확인해보자.</p><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre><td class="rouge-code"><pre><span class="kd">typealias</span> <span class="kt">CalculateTwoInts</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
+
+<span class="kd">func</span> <span class="nf">addTwoInts</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="n">multiply</span> <span class="kt">TwoInts</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="p">}</span>
+
+<span class="c1">// var mathFunction: (Int, Int) -&gt; Int = addTwoInts와 동일한 표현</span>
+<span class="k">var</span> <span class="nv">mathFunction</span><span class="p">:</span> <span class="kt">CalculateTwoInts</span> <span class="o">=</span> <span class="n">addTwoInts</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">mathFunction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>       <span class="c1">// 2 + 5 = 7</span>
+
+<span class="n">mathFunction</span> <span class="o">=</span> <span class="n">multiplyTwoInts</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">mathFunction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>       <span class="c1">// 2 * 5 = 10</span>
+</pre></table></code></div></div><p>함수의 타입 표현에서는 반환 타입을 생략할 수 없다.</p><p>함수를 데이터타입으로 사용할 수 있다 것은 함수를 전달인자로 받을 수도, 반환 값으로 돌려줄 수도 있다는 의미이다.</p><h3 id="전달인자로-함수를-전달받는-함수">전달인자로 함수를 전달받는 함수<a href="#전달인자로-함수를-전달받는-함수" class="anchor"><i class="fas fa-hashtag"></i></a></h3></h3><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="kd">func</span> <span class="nf">printMathResult</span><span class="p">(</span><span class="n">_</span> <span class="nv">mathFunction</span><span class="p">:</span> <span class="kt">CalculateTwoInts</span><span class="p">,</span> <span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Result: </span><span class="se">\(</span><span class="nf">mathFunction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">printMathResult</span><span class="p">(</span><span class="n">addTwoInts</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>       <span class="c1">// Result: 8 </span>
+</pre></table></code></div></div><h3 id="반환-값으로-함수를-반환하는-함수">반환 값으로 함수를 반환하는 함수<a href="#반환-값으로-함수를-반환하는-함수" class="anchor"><i class="fas fa-hashtag"></i></a></h3></h3><div class="language-swift highlighter-rouge"><div class="code-header"> <span label-text="Swift"><i class="fas fa-code small"></i></span> <button aria-label="copy" title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="kd">func</span> <span class="nf">chooseMathFunction</span><span class="p">(</span><span class="n">_</span> <span class="nv">toAdd</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CalculateTwoInts</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">toAdd</span> <span class="p">?</span> <span class="nv">addTwoInts</span> <span class="p">:</span> <span class="n">multiplyTwoInts</span>
+<span class="p">}</span>
+
+<span class="nf">printMathResult</span><span class="p">(</span><span class="nf">chooseMathFunction</span><span class="p">(</span><span class="kc">true</span><span class="p">),</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>     <span class="c1">// Result: 8   </span>
+</pre></table></code></div></div><p>위 함수는 특정 조건에 따라 적절한 함수를 반환해주는 함수이다.</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/programming/'>Programming</a>, <a href='/categories/swift/'>Swift</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/swift/" class="post-tag no-text-decoration" >swift</a> <a href="/tags/xcode/" class="post-tag no-text-decoration" >Xcode</a> <a href="/tags/programming/" class="post-tag no-text-decoration" >Programming</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=[Swift] 함수 고급 - 가람쥐's Blog&url=https://gaeunchoi.github.io/posts/swift-function2/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=[Swift] 함수 고급 - 가람쥐's Blog&u=https://gaeunchoi.github.io/posts/swift-function2/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=[Swift] 함수 고급 - 가람쥐's Blog&url=https://gaeunchoi.github.io/posts/swift-function2/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="Copy link" title-succeed="Link copied successfully!"> </i> </span></div></div></div><script src="https://utteranc.es/client.js" repo="gaeunchoi/gaeunchoi.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async> </script></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"><div class="panel-heading">Recently Updated</div><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/swift-optional-unwrapping/">[Swift] 옵셔널 추출</a><li><a href="/posts/BOJ1002/">[Python] BOJ 1002 터렛</a><li><a href="/posts/BOJ3009/">[Python] BOJ 3009 네 번째 점</a><li><a href="/posts/BOJ4153/">[Python] BOJ 4153 직각삼각형</a><li><a href="/posts/BOJ3053/">[Python] BOJ 3053 택시 기하학</a></ul></div><div id="access-tags"><div class="panel-heading">Trending Tags</div><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/algorithm/">algorithm</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/boj/">BOJ</a> <a class="post-tag" href="/tags/prime-number/">prime number</a> <a class="post-tag" href="/tags/java/">java</a> <a class="post-tag" href="/tags/programming/">Programming</a> <a class="post-tag" href="/tags/swift/">swift</a> <a class="post-tag" href="/tags/xcode/">Xcode</a> <a class="post-tag" href="/tags/computerarchitecture/">ComputerArchitecture</a> <a class="post-tag" href="/tags/inu/">INU</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"><div class="panel-heading pl-3 pt-2 mb-2">Contents</div><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="tail-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/swift-optional/"><div class="card-body"> <em class="timeago small" date="2022-01-28 16:35:00 +0900" >Jan 28, 2022</em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Swift] 옵셔널</h3><div class="text-muted small"><p> 본 게시물은 ‘스위프트 프로그래밍(3판)’의 8장 옵셔널을 정리하며 작성하는 게시글입니다. 아래 작성된 코드는 yagom님 swift 기본 문법의 코드를 참고했습니다. 옵셔널 개념 단어 뜻 그대로 ‘선택적인’, 즉 값이 있을 수도, 없을 수도 있음을 나타내는 표현이다. 이는 변수나 상수 등에 꼭 값이 있다는 것을 보장할 수 없다. 즉 변수 ...</p></div></div></a></div><div class="card"> <a href="/posts/swift-optional-unwrapping/"><div class="card-body"> <em class="timeago small" date="2022-01-28 18:51:00 +0900" >Jan 28, 2022</em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Swift] 옵셔널 추출</h3><div class="text-muted small"><p> 본 게시물은 ‘스위프트 프로그래밍(3판)’의 8장 옵셔널을 정리하며 작성하는 게시글입니다. 아래 작성된 코드는 yagom님 swift 기본 문법의 코드를 참고했습니다. 옵셔널 추출이란, 옵셔널에 들어있는 값을 사용하기 위해 꺼내오는 것 ! 1. 강제 추출 Forced Unwrapping 옵셔널 강제 추출은 옵셔널의 값을 추출하는 가장 간단...</p></div></div></a></div><div class="card"> <a href="/posts/swift-class/"><div class="card-body"> <em class="timeago small" date="2022-02-03 19:22:00 +0900" >Feb 3, 2022</em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Swift] 구조체와 클래스</h3><div class="text-muted small"><p> 본 게시물은 ‘스위프트 프로그래밍(3판)’의 9장 구조체와 클래스를 정리하며 작성하는 게시글입니다. 아래 작성된 코드는 yagom님 swift 기본 문법의 코드를 참고했습니다. 구조체 1. 개념 하나의 새로운 사용자 정의 데이터 타입이라고 말할 수 있다. 2. 정의 struct 키워드를 사용하여 정의할 수 있다. 1 2 3 4 5 6 7 ...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/swift-function/" class="btn btn-outline-primary" prompt="Older"><p>[Swift] 함수 기본</p></a> <a href="/posts/swift-optional/" class="btn btn-outline-primary" prompt="Newer"><p>[Swift] 옵셔널</p></a></div></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center text-muted"><div class="footer-left"><p class="mb-0"> © 2023 <a href="https://github.com/gaeunchoi">gaanii</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><div id="access-tags"><div class="panel-heading">Trending Tags</div><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/algorithm/">algorithm</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/boj/">BOJ</a> <a class="post-tag" href="/tags/prime-number/">prime number</a> <a class="post-tag" href="/tags/java/">java</a> <a class="post-tag" href="/tags/programming/">Programming</a> <a class="post-tag" href="/tags/swift/">swift</a> <a class="post-tag" href="/tags/xcode/">Xcode</a> <a class="post-tag" href="/tags/computerarchitecture/">ComputerArchitecture</a> <a class="post-tag" href="/tags/inu/">INU</a></div></div></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.16.1,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script defer src="/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script>
